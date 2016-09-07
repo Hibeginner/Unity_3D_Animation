@@ -1,0 +1,8 @@
+/Library/
+/obj/
+/ProjectSettings/
+/Temp/
+Assembly-CSharp.csproj
+LearnUnity.sln
+LearnUnity.userprefs
+*.meta
