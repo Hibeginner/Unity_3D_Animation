@@ -18,8 +18,11 @@ public class PlayerManager : MonoBehaviour, IGameManager {
         private set;
     }
 
-    public void Startup() {
+    private NetworkService _network;
+
+    public void Startup(NetworkService service) {
         Debug.Log("Player manager starting...");
+        _network = service;
         health = 50;
         maxHealth = 100;
 

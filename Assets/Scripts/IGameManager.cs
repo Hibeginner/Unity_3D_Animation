@@ -3,5 +3,5 @@
         get;
     }
 
-    void Startup();
+    void Startup(NetworkService service);
 }
