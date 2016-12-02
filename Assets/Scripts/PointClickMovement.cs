@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(CharacterController))]
 public class PointClickMovement : MonoBehaviour {
@@ -53,13 +54,16 @@ public class PointClickMovement : MonoBehaviour {
             Quaternion direction = Quaternion.LookRotation(movement);
             transform.rotation = Quaternion.Lerp(transform.rotation, direction, rotSpeed * Time.deltaTime);
         }*/
-        if (Input.GetMouseButton(0)) {//鼠标单击
+        if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject()) {//鼠标单击且鼠标不在UI上
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);//鼠标位置发射射线
             RaycastHit mouseHit;
             if (Physics.Raycast(ray, out mouseHit)) {
-                _targetPos = mouseHit.point;
-                _curSpeed = moveSpeed;
-                Debug.Log("单机碰撞点： " + mouseHit.point);
+                GameObject hitObject = mouseHit.transform.gameObject;
+                if (hitObject.layer == LayerMask.NameToLayer("Ground")) {//点击到地面才移动
+                    _targetPos = mouseHit.point;
+                    _curSpeed = moveSpeed;
+                    Debug.Log("单机碰撞点： " + mouseHit.point);
+                }
             }
         }
         if (_targetPos != Vector3.one) {//如果设置了目标移动位置,则移动
