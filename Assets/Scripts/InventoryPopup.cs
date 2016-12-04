@@ -15,11 +15,11 @@ public class InventoryPopup : MonoBehaviour {
     private string _curItem;
 
     public void Refresh() {
-        List<string> itemList = Managers.Inventory.GetItemList();
+        List<string> itemList = Managers.Inventory.GetItemList();//个人仓库中有的种类
 
-        int len = itemIcons.Length;
-        for (int i = 0; i < len; i++) {
-            if (i < itemList.Count) {
+        int len = itemIcons.Length;//定义的种类
+        for (int i = 0; i < len; i++) {//遍历定义的种类
+            if (i < itemList.Count) {//如果
                 itemIcons[i].gameObject.SetActive(true);
                 itemLabels[i].gameObject.SetActive(true);
 

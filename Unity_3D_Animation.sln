@@ -1,7 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{164FB2D8-FF24-9F45-EF9E-7756DC54DD08}") = "Unity_3D_Animation", "Assembly-CSharp.csproj", "{1AB1F7F9-DD61-22A8-A779-11C3D434006C}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity_3D_Animation.CSharp", "Unity_3D_Animation.CSharp.csproj", "{6C441736-C262-9CBC-A7EB-FD8E3A28D8AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1AB1F7F9-DD61-22A8-A779-11C3D434006C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1AB1F7F9-DD61-22A8-A779-11C3D434006C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1AB1F7F9-DD61-22A8-A779-11C3D434006C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1AB1F7F9-DD61-22A8-A779-11C3D434006C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C441736-C262-9CBC-A7EB-FD8E3A28D8AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C441736-C262-9CBC-A7EB-FD8E3A28D8AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C441736-C262-9CBC-A7EB-FD8E3A28D8AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C441736-C262-9CBC-A7EB-FD8E3A28D8AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
