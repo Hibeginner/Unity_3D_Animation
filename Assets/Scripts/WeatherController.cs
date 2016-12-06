@@ -18,6 +18,9 @@ public class WeatherController : MonoBehaviour {
 	void Start () {
         _fullIntensity = sun.intensity;
 	}
+    void Update() {
+        //Debug.Log("Sun light: " + sun.intensity);
+    }
 
     private void SetOvercast(float value) {
         sky.SetFloat("_Blend", value);//多云
