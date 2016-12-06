@@ -62,7 +62,7 @@ public class PointClickMovement : MonoBehaviour {
                 if (hitObject.layer == LayerMask.NameToLayer("Ground")) {//点击到地面才移动
                     _targetPos = mouseHit.point;
                     _curSpeed = moveSpeed;
-                    Debug.Log("单机碰撞点： " + mouseHit.point);
+                    //Debug.Log("单机碰撞点： " + mouseHit.point);
                 }
             }
         }
@@ -72,7 +72,7 @@ public class PointClickMovement : MonoBehaviour {
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, rotSpeed * Time.deltaTime);//转向目标
             movement = _curSpeed * Vector3.forward;
             movement = transform.TransformDirection(movement);//转换成世界坐标系
-            Debug.Log(movement);
+            //Debug.Log(movement);
             if (Vector3.Distance(_targetPos, transform.position) < targetBuffer) {
                 _curSpeed -= deceleration * Time.deltaTime;//接近目标时减速到0
                 if (_curSpeed <= 0) {
