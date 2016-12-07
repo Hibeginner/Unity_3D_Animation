@@ -10,10 +10,12 @@ public class UIController : MonoBehaviour {
     void Awake() {
         Messenger.AddListener(GameEvent.HEALTH_UPDATED, OnHealthUpdated);
         Messenger.AddListener(GameEvent.LEVEL_COMPLETE, OnLevelComplete);
+        Messenger.AddListener(GameEvent.LEVEL_FAILED, OnLevelFailed);
     }
     void OnDestroy() {
         Messenger.RemoveListener(GameEvent.HEALTH_UPDATED, OnHealthUpdated);
         Messenger.RemoveListener(GameEvent.LEVEL_COMPLETE, OnLevelComplete);
+        Messenger.RemoveListener(GameEvent.LEVEL_FAILED, OnLevelFailed);
     }
 
 	// Use this for initialization
@@ -48,5 +50,16 @@ public class UIController : MonoBehaviour {
         yield return new WaitForSeconds(2);//等待2秒进入下一关卡
 
         Managers.Mission.GoToNext();
+    }
+    private void OnLevelFailed() {
+        StartCoroutine(FailLevel());
+    }
+    private IEnumerator FailLevel() {
+        levelEnding.gameObject.SetActive(true);
+        levelEnding.text = "Level Failed...";
+        yield return new WaitForSeconds(2);
+
+        Managers.Player.Respawn();
+        Managers.Mission.RestartCurrent();
     }
 }
