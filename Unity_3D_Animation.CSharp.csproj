@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\BasicUI.cs" />
     <Compile Include="Assets\Scripts\CollectibleItem.cs" />
     <Compile Include="Assets\Scripts\ColorChangeDevice.cs" />
+    <Compile Include="Assets\Scripts\DataManager.cs" />
     <Compile Include="Assets\Scripts\DeviceOperator.cs" />
     <Compile Include="Assets\Scripts\DeviceTrigger.cs" />
     <Compile Include="Assets\Scripts\DoorOpenDevice.cs" />

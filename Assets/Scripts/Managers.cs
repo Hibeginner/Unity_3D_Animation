@@ -7,27 +7,14 @@ using System.Collections.Generic;
 [RequireComponent(typeof(WeatherManager))]
 [RequireComponent(typeof(ImagesManager))]
 [RequireComponent(typeof(MissionManager))]
+[RequireComponent(typeof(DataManager))]
 public class Managers : MonoBehaviour {
-    public static PlayerManager Player {
-        get;
-        private set;
-    }
-    public static InventoryManager Inventory {
-        get;
-        private set;
-    }
-    public static WeatherManager Weather {
-        get;
-        private set;
-    }
-    public static ImagesManager Images {
-        get;
-        private set;
-    }
-    public static MissionManager Mission {
-        get;
-        private set;
-    }
+    public static PlayerManager Player {get; private set;}
+    public static InventoryManager Inventory {get; private set;}
+    public static WeatherManager Weather {get; private set;}
+    public static ImagesManager Images {get; private set;}
+    public static MissionManager Mission {get; private set;}
+    public static DataManager Data {get; private set;}
 
     private List<IGameManager> _startSequence;
 
@@ -39,6 +26,7 @@ public class Managers : MonoBehaviour {
         Weather = GetComponent<WeatherManager>();
         Images = GetComponent<ImagesManager>();
         Mission = GetComponent<MissionManager>();
+        Data = GetComponent<DataManager>();
 
         _startSequence = new List<IGameManager>();
         _startSequence.Add(Player);
@@ -46,6 +34,7 @@ public class Managers : MonoBehaviour {
         //_startSequence.Add(Weather);
         _startSequence.Add(Images);
         _startSequence.Add(Mission);
+        _startSequence.Add(Data);
 
         StartCoroutine(StartupManagers());
     }

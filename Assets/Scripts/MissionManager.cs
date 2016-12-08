@@ -20,9 +20,13 @@ public class MissionManager : MonoBehaviour, IGameManager {
     public void Startup(NetworkService service) {
         Debug.Log("Mission manager starting...");
         _network = service;
-        curLevel = 0;
-        maxLevel = 1;
+        UpdateData(0, 3);
         status = ManagerStatus.Started;
+    }
+
+    public void UpdateData(int curLevel, int maxLevel) {
+        this.curLevel = curLevel;
+        this.maxLevel = maxLevel;
     }
 
     public void GoToNext() {
@@ -33,6 +37,7 @@ public class MissionManager : MonoBehaviour, IGameManager {
             Application.LoadLevel(name);
         } else {
             Debug.Log("Last level");
+            Messenger.Broadcast(GameEvent.GAME_COMPLETE);
         }
     }
 
