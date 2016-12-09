@@ -1404,7 +1404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ac4a3d921b4c8439e23a3ae6661ea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 185124, guid: 58054deedcecbe44aaa3117995070b0d, type: 2}
+  enemyPrefab: {fileID: 1197129000288756, guid: fa4d61c25bcfec24ab817980719d6794,
+    type: 2}
 --- !u!1 &387562292
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,6 +1834,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Delegates: []
   delegates: []
+--- !u!1001 &449047883
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4144051557189920, guid: fa4d61c25bcfec24ab817980719d6794, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144051557189920, guid: fa4d61c25bcfec24ab817980719d6794, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144051557189920, guid: fa4d61c25bcfec24ab817980719d6794, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144051557189920, guid: fa4d61c25bcfec24ab817980719d6794, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144051557189920, guid: fa4d61c25bcfec24ab817980719d6794, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144051557189920, guid: fa4d61c25bcfec24ab817980719d6794, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144051557189920, guid: fa4d61c25bcfec24ab817980719d6794, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4144051557189920, guid: fa4d61c25bcfec24ab817980719d6794, type: 2}
+      propertyPath: m_RootOrder
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197129000288756, guid: fa4d61c25bcfec24ab817980719d6794, type: 2}
+      propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: fa4d61c25bcfec24ab817980719d6794, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &558940227
 GameObject:
   m_ObjectHideFlags: 0
