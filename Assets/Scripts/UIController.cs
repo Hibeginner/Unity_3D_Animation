@@ -6,6 +6,7 @@ public class UIController : MonoBehaviour {
     [SerializeField] private Text healthLabel;
     [SerializeField] private InventoryPopup popup;
     [SerializeField] private Text levelEnding;
+    [SerializeField] private SettingsPopup settingsPopup;
 
     void Awake() {
         Messenger.AddListener(GameEvent.HEALTH_UPDATED, OnHealthUpdated);
@@ -26,14 +27,26 @@ public class UIController : MonoBehaviour {
 
         levelEnding.gameObject.SetActive(false);
         popup.gameObject.SetActive(false);
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        settingsPopup.gameObject.SetActive(false);
+    }
+    
+    // Update is called once per frame
+    void Update () {
         if (Input.GetKeyDown(KeyCode.M)) {
             bool isShowing = popup.gameObject.activeSelf;
             popup.gameObject.SetActive(!isShowing);
             popup.Refresh();
+        }
+        if (Input.GetKeyDown(KeyCode.N)) {
+            bool isShowing = settingsPopup.gameObject.activeSelf;
+            settingsPopup.gameObject.SetActive(!isShowing);
+            /*if (isShowing) {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            } else {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }*/
         }
 	}
 
